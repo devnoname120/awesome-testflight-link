@@ -1,8 +1,8 @@
-name: Update TestFilght Link Status
+name: Update TestFlight Link Status
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '*/20 * * * *'
   workflow_dispatch:
     inputs:
       python_version:
@@ -13,7 +13,6 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    if: github.repository == 'pluwen/awesome-testflight-link'
     env:
       python_version: ${{ github.event.inputs.python_version }}
     steps:
@@ -27,7 +26,7 @@ jobs:
           architecture: x64
       - name: Init Python Env
         run: pip install -r scripts/requirements.txt
-      - name: Update TestFilght Link Status
+      - name: Update TestFlight Link Status
         run: python scripts/update_status.py
 
       - name: Git commit && push
@@ -39,21 +38,3 @@ jobs:
           git add .
           git commit -m "Github Action Auto Updated - `date`"
           git push
-
-  forked-repo:
-    runs-on: ubuntu-latest
-    if: github.repository != 'pluwen/awesome-testflight-link'
-    
-    steps:
-      - uses: actions/checkout@v3.3.0
-
-      - name: Git commit && push
-        run: |
-          git config --global user.email "github_bot@noreply.github.com"
-          git config --global user.name "github_bot"
-          git remote add upstream https://github.com/pluwen/awesome-testflight-link.git 
-          git fetch upstream
-          git checkout main
-          git merge upstream/main --allow-unrelated-histories
-          git push origin main
-
