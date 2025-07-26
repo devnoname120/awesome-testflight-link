@@ -1,4 +1,4 @@
-name: Order TestFilght Link Status
+name: Order TestFlight Link Status
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
           git checkout status_ordered
           git checkout origin/main db/sqlite3.db
 
-      - name: Order TestFilght Link Status
+      - name: Order TestFlight Link Status
         run: python scripts/order_status.py
 
       - name: Git commit && push
