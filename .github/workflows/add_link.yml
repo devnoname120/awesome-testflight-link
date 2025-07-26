@@ -1,4 +1,4 @@
-name: Add A TestFilght Link
+name: Add A TestFlight Link
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
         required: false
         default: 'None'
       testflight_link:
-        description: 'Testflight 公共测试的完整链接(非 TestFilght 链接请添加到 scripts/data/signup.md)'
+        description: 'Testflight 公共测试的完整链接(非 TestFlight 链接请添加到 scripts/data/signup.md)'
         required: true
       table:
         description: '链接分类(可选值：`macos`, `ios`, `ios_game`, `chinese`)'
@@ -17,7 +17,6 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    if: github.repository == 'pluwen/awesome-testflight-link'
     steps:
       - uses: actions/checkout@v3.3.0
       - name: Set up Python
@@ -27,7 +26,7 @@ jobs:
           architecture: x64
       - name: Init Python Env
         run: pip install -r scripts/requirements.txt
-      - name: Add A TestFilght Link
+      - name: Add A TestFlight Link
         run: python scripts/add_link.py "${{ github.event.inputs.testflight_link }}" "${{ github.event.inputs.table }}" "${{ github.event.inputs.app_name }}"
 
       - name: Git commit && push
