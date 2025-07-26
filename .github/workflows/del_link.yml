@@ -1,4 +1,4 @@
-name: Del A TestFilght Link
+name: Del A TestFlight Link
 
 on:
   workflow_dispatch:
@@ -13,7 +13,6 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    if: github.repository == 'pluwen/awesome-testflight-link'
     steps:
       - uses: actions/checkout@v3.3.0
       - name: Set up Python
@@ -21,7 +20,7 @@ jobs:
         with:
           python-version: '3.11.1'
           architecture: x64
-      - name: Del A TestFilght Link
+      - name: Del A TestFlight Link
         run: python scripts/del_link.py "${{ github.event.inputs.testflight_link }}" "${{ github.event.inputs.table }}"
 
       - name: Git commit && push
@@ -31,5 +30,5 @@ jobs:
           git config --global user.email "github_bot@noreply.github.com"
           git config --global user.name "github_bot"
           git add .
-          git commit -m "Del A TestFilght Link"
+          git commit -m "Del A TestFlight Link"
           git push
