@@ -9,7 +9,7 @@ _✅ These 140 apps are currently accepting new testers! Click the links to join
 | 2Do - Todo List, Tasks & Notes | [https://testflight.apple.com/join/McBV96Wi](https://testflight.apple.com/join/McBV96Wi) | N | 2025-07-26 |
 | AdGuard  — adblock&privacy beta | [https://testflight.apple.com/join/PMfu4nmW](https://testflight.apple.com/join/PMfu4nmW) | Y | 2025-08-18 |
 | Audiobookshelf | [https://testflight.apple.com/join/wiic7QIW](https://testflight.apple.com/join/wiic7QIW) | F | 2025-08-16 |
-| Microsoft Office | [https://testflight.apple.com/join/eHAKJBtM](https://testflight.apple.com/join/eHAKJBtM) | Y | 2025-08-19 |
+| Microsoft Office | [https://testflight.apple.com/join/eHAKJBtM](https://testflight.apple.com/join/eHAKJBtM) | F | 2025-08-20 |
 | Microsoft Remote Desktop Beta | [https://testflight.apple.com/join/vkLIflUJ](https://testflight.apple.com/join/vkLIflUJ) | F | 2025-08-17 |
 | Pushover Notifications | [https://testflight.apple.com/join/vkwfdWM0](https://testflight.apple.com/join/vkwfdWM0) | N | 2025-04-18 |
 | QR File Transfer | [https://testflight.apple.com/join/P5UOcDLa](https://testflight.apple.com/join/P5UOcDLa) | N | 2025-05-19 |
